@@ -92,7 +92,7 @@ class Agility {
 
          */
 
-        return null
+        return ""
 
     }
 

@@ -1,0 +1,3 @@
+enum class PokemonType {
+    PLANT, POISON, WATER, ELECTRIC, FIRE, ROCK, FLYER, FIGHTER, BUG, BEST
+}

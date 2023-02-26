@@ -58,7 +58,7 @@ class League {
         Team(6, 3, 7),
         Team(7, 10, 69),
         Team(4, 9, 78),
-        Team(5, 6, 99),
+        Team(5, 6, 90),
         Team(8, 4, 72),
         Team(3, 4, 96),
         Team(1, 11, 96),
@@ -116,10 +116,15 @@ class League {
     //List of most rare pokemons ordered by increasing level
     fun mostRarePokemons():List<String?>
     {
-        val rarePokemons = listOf<String>()
+        val rarePokemons = listOf(null)
         return rarePokemons
     }
 
+    //Return the level of the pokemonteam. The total of level of the pokemons of the trainer.
+    fun teamPokemonLevel(trainerId: Int):Int
+    {
+        return 0
+    }
 
 
 }

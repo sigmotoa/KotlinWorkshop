@@ -39,7 +39,8 @@ class League {
         Pokemon(10, "Caterpie", BUG),
         Pokemon(11, "Metapod", BUG),
         Pokemon(12, "Butterfree", BUG),
-        Pokemon(13, "sigmotoa", BEST)
+        Pokemon(13, "Parkysauro", FIGHTER),
+        Pokemon(14, "Chocometon", FLYER)
 
     )
 
@@ -47,15 +48,15 @@ class League {
         Team(1, 1, 23),
         Team(4, 11, 31),
         Team(7, 9, 58),
-        Team(5, 12, 19),
-        Team(1, 7, 52),
-        Team(4, 12, 11),
+        Team(5, 7, 19),
+        Team(1, 4, 52),
+        Team(6, 12, 11),
         Team(8, 1, 90),
         Team(6, 11, 85),
         Team(4, 3, 94),
         Team(2, 12, 72),
         Team(6, 3, 7),
-        Team(7, 4, 99),
+        Team(7, 10, 69),
         Team(4, 9, 78),
         Team(5, 6, 99),
         Team(8, 4, 72),
@@ -67,7 +68,7 @@ class League {
         Team(5, 9, 48),
         Team(5, 5, 74),
         Team(4, 7, 12),
-        Team(8, 7, 33),
+        Team(8, 12, 33),
         Team(4, 8, 26),
         Team(4, 5, 84),
         Team(3, 12, 96),
@@ -84,15 +85,41 @@ class League {
         Team(5, 10, 16),
         Team(4, 6, 97),
         Team(7, 6, 39),
-        Team(7, 4, 35)
+        Team(7, 4, 35),
+        Team(9, 14, 99),
+
 
 
     )
 
+    //Returns descending list of trainers ID
     fun listTrainersIds():List<Int?>
     {
         val trainersId= listOf(null)
         return trainersId
     }
+
+    //Returns trainer with more pokemons
+    fun trainerMorePokemons():String{
+        return ""
+    }
+
+    fun trainerLessPokemons():String{
+        return ""
+    }
+
+    //Most common pokemon
+    fun mostCommonPokemon():String{
+        return ""
+    }
+
+    //List of most rare pokemons ordered by increasing level
+    fun mostRarePokemons():List<String?>
+    {
+        val rarePokemons = listOf<String>()
+        return rarePokemons
+    }
+
+
 
 }

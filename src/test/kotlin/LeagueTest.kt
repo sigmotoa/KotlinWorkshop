@@ -38,5 +38,25 @@ class LeagueTest {
         )
     }
 
+    @Test
+    fun teamPokemon2LevelTest()
+    {
+        assertEquals("Wrong data", 72, league.teamPokemonLevel(2))
+    }
+@Test
+    fun teamPokemon1LevelTest()
+    {
+        assertEquals("Wrong data", 399, league.teamPokemonLevel(1))
+    }
+@Test
+    fun teamPokemon3LevelTest()
+    {
+        assertEquals("Wrong data", 282, league.teamPokemonLevel(3))
+    }
+@Test
+    fun teamPokemon9LevelTest()
+    {
+        assertEquals("Wrong data", 199, league.teamPokemonLevel(9))
+    }
 
 }

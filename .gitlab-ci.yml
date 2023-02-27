@@ -3,7 +3,6 @@ image: openjdk:11-jdk
 stages:
   - compile
   - test
-  - send_email
 
 before_script:
   - export GRADLE_USER_HOME=`pwd`/.gradle
@@ -21,8 +20,7 @@ compile:
 test:
   stage: test
   script:
+    - pip3 install python-gitlab
     - echo "Running the sigmotoa test..."
     - ./gradlew test --info
-    - pytest --junit-xml=test-results.xml
-    - pip3 install python-gitlab
     - python3 send_mail.py $GITLAB_USER_EMAIL $GITLAB_USER_NAME "Resultado Pruebas" test-results.xml

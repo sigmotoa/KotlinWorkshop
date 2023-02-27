@@ -24,9 +24,5 @@ test:
     - echo "Running the sigmotoa test..."
     - ./gradlew test --info
     - pytest --junit-xml=test-results.xml
-
-send_email:
-  stage: send_email
-  script:
     - pip3 install python-gitlab
     - python3 send_mail.py $GITLAB_USER_EMAIL $GITLAB_USER_NAME "Resultado Pruebas" test-results.xml

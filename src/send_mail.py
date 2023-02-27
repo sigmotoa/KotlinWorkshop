@@ -40,9 +40,3 @@ def enviar_correo(destinatario, nombre_usuario, resultado, archivo_adjunto):
     servidor_smtp.sendmail(remitente, destinatario, mensaje.as_string())
     servidor_smtp.quit()
 
-# Ejemplo de uso
-destinatario = "destinatario@ejemplo.com"
-nombre_usuario = "nombre_de_usuario"
-resultado = "¡El pipeline fue exitoso!"
-archivo_adjunto = "test-results.xml"
-enviar_correo(destinatario, nombre_usuario, resultado, archivo_adjunto)

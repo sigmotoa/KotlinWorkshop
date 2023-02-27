@@ -126,5 +126,20 @@ class League {
         return 0
     }
 
+    //Returns the Name of the trainer who wins
+    fun pokemonBattle(team1: Int, team2: Int):String
+    {
+
+        //Pokemon battle winner is a team who total of pokemmon level divided by quantity(average) is bigger than the other team
+
+        //i.e. Team A has 2 pokemons with total level of 300 -> average is 150 The battle will be calculated with this
+        // Team B has 3 pokemons with a total level of 315 -> average is  105.
+
+        // In the example Team A wins.
+
+        // Use float or Double for the calculation of average
+
+        return ""
+    }
 
 }

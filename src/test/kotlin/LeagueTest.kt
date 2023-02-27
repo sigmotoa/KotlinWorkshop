@@ -59,4 +59,18 @@ class LeagueTest {
         assertEquals("Wrong data", 199, league.teamPokemonLevel(9))
     }
 
+    @Test
+    fun pokemonBattleTest()
+    {
+        assertEquals("Wrong Battle", "Ivan Motoa", league.pokemonBattle(2,9))
+        assertEquals("Wrong Battle", "Ivan Motoa", league.pokemonBattle(3,9))
+        assertEquals("Wrong Battle", "Ivan Motoa", league.pokemonBattle(4,9))
+        assertEquals("Wrong Battle", "Ivan Motoa", league.pokemonBattle(1,9))
+        assertEquals("Wrong Battle", "Misty Star", league.pokemonBattle(2,1))
+        assertEquals("Wrong Battle", "Misty Star", league.pokemonBattle(2,3))
+        assertEquals("Wrong Battle", "Misty Star", league.pokemonBattle(2,7))
+        assertEquals("Wrong Battle", "Max Powell", league.pokemonBattle(4,5))
+
+    }
+
 }

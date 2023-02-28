@@ -20,7 +20,7 @@ compile:
 test:
   stage: test
   script:
-    - pip3 install python-gitlab
+    - pip install python-gitlab
     - echo "Running the sigmotoa test..."
     - ./gradlew test --info > test-results.xml
-    - python3 send_mail.py $GITLAB_USER_EMAIL $GITLAB_USER_NAME "Resultado Pruebas" test-results.xml
+    - python send_mail.py $GITLAB_USER_EMAIL $GITLAB_USER_NAME "Resultado Pruebas" test-results.xml

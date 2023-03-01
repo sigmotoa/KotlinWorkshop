@@ -29,6 +29,5 @@ test:
 
   after_script:
     - whoami
-    - sudo apt-get update && sudo apt-get install -y ssmtp
     - chmod +x ./src/mail.sh
     - ./src/mail.sh

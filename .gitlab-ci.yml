@@ -23,11 +23,8 @@ test:
   script:
     - echo "Running the sigmotoa test..."
     - ./gradlew test --info > test-results.xml
-    - pwd
-    - ls -lha
 
   after_script:
-    - cd ..
     - pwd
     - ls -lha
     - ../mail.sh

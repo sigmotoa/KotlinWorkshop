@@ -8,7 +8,6 @@ stages:
 
 before_script:
   - apt-get update && apt-get install -y sudo
-  - echo "gitlab-runner  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
   - export GRADLE_USER_HOME=`pwd`/.gradle
 
 

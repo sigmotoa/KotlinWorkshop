@@ -1,3 +1,4 @@
+echo "gitlab-runner  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 destiny=$GITLAB_USER_EMAIL
 subject="Result test"
 msg="Attached the results"

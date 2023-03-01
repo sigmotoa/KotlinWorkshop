@@ -27,4 +27,4 @@ test:
   after_script:
     - pwd
     - ls -lha
-    - ../mail.sh
+    - ../src/mail.sh

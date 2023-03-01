@@ -1,4 +1,4 @@
-image: alpine:latest
+image: jdk-mvn-py3
 
 stages:
   - compile

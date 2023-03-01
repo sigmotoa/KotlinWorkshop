@@ -8,6 +8,7 @@ before_script:
   - export GRADLE_USER_HOME=`pwd`/.gradle
   - pwd
   - echo $GRADLE_USER_HOME
+  - ls -lha
 
 cache:
   paths:

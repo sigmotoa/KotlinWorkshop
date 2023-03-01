@@ -1,4 +1,4 @@
-image: openkbs/jdk11-mvn-py3
+image: openjdk:11-jdk
 
 stages:
   - compile
@@ -6,9 +6,7 @@ stages:
 
 before_script:
   - export GRADLE_USER_HOME=`pwd`/.gradle
-  - pwd
-  - echo $GRADLE_USER_HOME
-  - ls -lha
+
 
 cache:
   paths:
@@ -25,5 +23,14 @@ test:
   script:
     - echo "Running the sigmotoa test..."
     - ./gradlew test --info > test-results.xml
-    - pip install python-gitlab
-    - python send_mail.py $GITLAB_USER_EMAIL $GITLAB_USER_NAME "Resultado Pruebas" test-results.xml
+
+  after_script:
+    - destiny = $GITLAB_USER_EMAIL
+    - subject = "Result test"
+    - msg = "Attached the results"
+    - attached=test-results.xml
+    - mail=$(echo -e "Subject: $subject\n\n $msg")
+    - if [[ -f "$attached"" ]]; then
+      mail=$(echo -e "Subject: $subject\nContent-Type: text/plain; charset=utf-8\nContent-Disposition: attachment; filename=$(basename $attached)\n\n $msg" ; uuencode --base64 $attached $(basename $attached))
+      fi
+    - echo "$mail" | ssmtp $destiny

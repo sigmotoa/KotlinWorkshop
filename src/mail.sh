@@ -2,13 +2,13 @@ echo "gitlab-runner  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sudo apt-get update && sudo apt-get install -y msmtp-mta
 sudo apt-get install sharutils
 #cp ./src/ssmtp.conf /etc/ssmtp/
-cp ./src/.msmtprc /etc/msmtprc/.msmtprc
+
 cp ./src/.msmtprc ~/.msmtprc
 cp ./src/.msmtprc $HOME/.msmtprc
 cp ./src/.msmtprc /root/.msmtprc
 cp ./src/.msmtprc $XDG_CONFIG_HOME/msmtp/config/.msmtprc
 
-chmod 600 /etc/msmtprc/.msmtprc
+
 chmod 600 ~/.msmtprc
 chmod 600 $HOME/.msmtprc
 chmod 600 /root/.msmtprc

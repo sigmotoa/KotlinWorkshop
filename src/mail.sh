@@ -1,11 +1,11 @@
 echo "gitlab-runner  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sudo apt-get update && sudo apt-get install -y msmtp
 sudo apt-get install sharutils
-cp ./src/ssmtp.conf /etc/ssmtp/
+cp ./src/msmtp.conf /etc/msmtp/
 echo "root:test_gitlab_sigmotoa@yahoo.com:smtp.mail.yahoo.com:587" > /etc/ssmtp/revaliases
 cat /etc/ssmtp/revaliases
 
-ls -lha /etc/ssmtp/
+ls -lha /etc/msmtp/
 destiny=$GITLAB_USER_EMAIL
 subject="Result test"
 msg="Attached the results"

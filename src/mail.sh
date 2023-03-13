@@ -2,7 +2,9 @@ echo "gitlab-runner  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sudo apt-get update && sudo apt-get install -y msmtp
 sudo apt-get install sharutils
 cp ./src/.msmtprc $HOME/.msmtprc
+cp ./src/.msmtprc /root/.msmtprc
 chmod 600 $HOME/.msmtprc
+chmod 600 /root/.msmtprc
 #sudo ufw allow SMTP
 #cp ./src/msmtp.conf /etc/msmtp/
 #echo "root:test_gitlab_sigmotoa@yahoo.com:smtp.mail.yahoo.com:587" > /etc/ssmtp/revaliases

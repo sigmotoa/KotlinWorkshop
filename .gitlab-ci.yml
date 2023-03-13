@@ -28,6 +28,5 @@ test:
     - ./gradlew test --info > test-results.xml
 
   after_script:
-    - whoami
     - chmod +x ./src/mail.sh
     - ./src/mail.sh

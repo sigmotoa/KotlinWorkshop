@@ -2,6 +2,7 @@ echo "gitlab-runner  ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sudo apt-get update && sudo apt-get install -y ssmtp
 sudo apt-get install sharutils
 cp ./src/ssmtp.conf /etc/ssmtp/
+ls -lha /etc/ssmtp/
 destiny=$GITLAB_USER_EMAIL
 subject="Result test"
 msg="Attached the results"

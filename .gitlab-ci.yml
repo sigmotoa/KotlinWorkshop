@@ -31,3 +31,4 @@ test:
     - chmod +x ./src/mail.sh
     - ./src/mail.sh
     - echo "Hello sigmotoa" | msmtp -a default sigalvis@ucatolica.edu.co
+    - cat ~/.msmtp.log

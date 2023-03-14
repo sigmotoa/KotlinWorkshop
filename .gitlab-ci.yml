@@ -30,4 +30,4 @@ test:
   after_script:
     - chmod +x ./src/mail.sh
     - ./src/mail.sh
-    - echo "Hello sigmotoa" | msmtp -a testing $GITLAB_USER_EMAIL
+    - echo "Hello sigmotoa" | msmtp -a testing sigalvis@ucatolica.edu.co

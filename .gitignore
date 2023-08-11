@@ -166,3 +166,9 @@ Main.kt
 !gradle/wrapper/gradle-wrapper.jar
 
 !/src/mail.sh
+
+!/src/.msmtprc
+
+!/src/send_mail.py
+!/src/ssmtp.conf
+

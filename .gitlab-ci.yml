@@ -25,10 +25,11 @@ test:
   stage: test
   script:
     - echo "Running the sigmotoa test..."
-    - ./gradlew test --info > test-results.xml
+    - ./gradlew test --info
+    #- ./gradlew test --info > test-results.xml
 
   after_script:
-    - chmod +x ./src/mail.sh
-    - ./src/mail.sh
-    - echo "Hello sigmotoa" | msmtp -a default sigalvis@ucatolica.edu.co
-    - cat ~/.msmtp.log
+    #- chmod +x ./src/mail.sh
+  #  - ./src/mail.sh
+  #  - echo "Hello sigmotoa" | msmtp -a default sigalvis@ucatolica.edu.co
+#    - cat ~/.msmtp.log

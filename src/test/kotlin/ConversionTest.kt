@@ -22,6 +22,14 @@ class ConversionTest {
             conversion.kmToM_1(0.250)
         )
     }
+    @Test
+    fun kmToM_1_2() {
+        assertEquals(
+            "Error",
+            155,
+            conversion.kmToM_1(0.155)
+        )
+    }
 
 
     @Test

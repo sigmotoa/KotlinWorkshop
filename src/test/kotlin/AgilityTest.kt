@@ -1,9 +1,8 @@
 package com.sigmotoa.workshop
 
-import org.hamcrest.CoreMatchers. `is`
+import org.hamcrest.CoreMatchers.`is`
 import org.junit.Assert.*
 import org.junit.Test
-
 
 
 class AgilityTest {
@@ -22,22 +21,19 @@ class AgilityTest {
         assertTrue(
             "Error in your code",
             agile.biggerThan(
-                "0.05"
-                ,"0.005"
+                "0.05", "0.005"
             )
         )
         assertFalse(
             "Error in your code",
             agile.biggerThan(
-                "10"
-                ,"100"
+                "10", "100"
             )
         )
         assertFalse(
             "Error in your code",
             agile.biggerThan(
-                "0.01"
-                ,"0.02"
+                "0.01", "0.02"
             )
         )
     }
@@ -46,18 +42,18 @@ class AgilityTest {
     fun whenOrder() {
         assertEquals(
             "Wrong order",
-            listOf(2,4,8,10,15),
-            agile.order(10,15,2,4,8)
+            listOf(2, 4, 8, 10, 15),
+            agile.order(10, 15, 2, 4, 8)
         )
-       assertEquals(
-           "Wrong order",
-           listOf(-10,2,4,8,15),
-           agile.order(-10, 15, 2, 4, 8)
-       )
         assertEquals(
             "Wrong order",
-            listOf(-7,-4,0,10,15),
-            agile.order(0,15,-7,-4, 10)
+            listOf(-10, 2, 4, 8, 15),
+            agile.order(-10, 15, 2, 4, 8)
+        )
+        assertEquals(
+            "Wrong order",
+            listOf(-7, -4, 0, 10, 15),
+            agile.order(0, 15, -7, -4, 10)
         )
     }
 
@@ -67,7 +63,7 @@ class AgilityTest {
             "Error",
             -1.0,
             agile.smallerThan(
-                listOf(0.0, 10.1, -1.0, -0.2, 3.2, 200.1 )
+                listOf(0.0, 10.1, -1.0, -0.2, 3.2, 200.1)
             ),
             0.0
         )
@@ -100,19 +96,24 @@ class AgilityTest {
 
     @Test
     fun palindromeNumber() {
-        assertTrue("Wrong answer",
+        assertTrue(
+            "Wrong answer",
             agile.palindromeNumber(123321)
         )
-        assertTrue("Wrong answer",
+        assertTrue(
+            "Wrong answer",
             agile.palindromeNumber(1234321)
         )
-        assertTrue("Wrong answer",
+        assertTrue(
+            "Wrong answer",
             agile.palindromeNumber(1237321)
         )
-        assertFalse("Wrong answer",
+        assertFalse(
+            "Wrong answer",
             agile.palindromeNumber(123)
         )
-        assertFalse("Wrong answer",
+        assertFalse(
+            "Wrong answer",
             agile.palindromeNumber(345)
         )
     }
@@ -122,7 +123,7 @@ class AgilityTest {
         assertTrue(
             "Wrong answer",
             agile.palindromeWord("civic")
-            )
+        )
         assertTrue(
             "Wrong answer",
             agile.palindromeWord("solos")
@@ -141,21 +142,29 @@ class AgilityTest {
     @Test
     fun factorial() {
 
-        assertEquals("Error",
-        1,
-        agile.factorial(0))
+        assertEquals(
+            "Error",
+            1,
+            agile.factorial(0)
+        )
 
-        assertEquals("Error",
-        1,
-        agile.factorial(1))
+        assertEquals(
+            "Error",
+            1,
+            agile.factorial(1)
+        )
 
-        assertEquals("Error",
-        6,
-        agile.factorial(3))
+        assertEquals(
+            "Error",
+            6,
+            agile.factorial(3)
+        )
 
-        assertEquals("Error",
-        3628800,
-        agile.factorial(10))
+        assertEquals(
+            "Error",
+            3628800,
+            agile.factorial(10)
+        )
     }
 
     @Test
@@ -163,7 +172,7 @@ class AgilityTest {
 
         assertTrue(
             "Wrong answer",
-        agile.is_Odd(numA = -7)
+            agile.is_Odd(numA = -7)
         )
         assertFalse(
             "Number isn't odd",
@@ -175,7 +184,7 @@ class AgilityTest {
         )
         assertFalse(
             "Number isn't odd",
-        agile.is_Odd(2)
+            agile.is_Odd(2)
         )
         assertTrue(
             "Wrong answer",
@@ -261,22 +270,22 @@ class AgilityTest {
     fun fibonacci() {
         assertEquals(
             "Wrong answer",
-            listOf(0,1,1,2,3,5,8,13,21,34,55),
+            listOf(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55),
             agile.fibonacci(10)
         )
         assertEquals(
             "Wrong answer",
-            listOf(0,1,1,2,3,5,8,13,21),
+            listOf(0, 1, 1, 2, 3, 5, 8, 13, 21),
             agile.fibonacci(8)
         )
         assertEquals(
             "Wrong answer",
-            listOf(0,1,1),
+            listOf(0, 1, 1),
             agile.fibonacci(2)
         )
         assertEquals(
             "Wrong answer",
-            listOf(0,1,1,2,3,5,8,13,21,34,55,89),
+            listOf(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89),
             agile.fibonacci(11)
         )
 
@@ -329,4 +338,40 @@ class AgilityTest {
         assertThat(agile.fizzBuzz(16), `is`("16"))
         assertThat(agile.fizzBuzz(4), `is`("4"))
     }
+
+    @Test
+    fun pascalTriangleTest_1() {
+        assertEquals(
+            "Wrong answer",
+            listOf("*\n"),
+            agile.pascalTriangle(1)
+        )
+    }
+
+    @Test
+    fun pascalTriangleTest_3() {
+        assertEquals(
+            "Wrong answer",
+            listOf("*\n, * *\n, * * *\n"),
+            agile.pascalTriangle(3)
+        )
+    }
+    @Test
+    fun pascalTriangleTest_5() {
+        assertEquals(
+            "Wrong answer",
+            listOf("*\n, * *\n, * * *\n, * * * *\n, * * * * *\n"),
+            agile.pascalTriangle(5)
+        )
+    }
+
+    @Test
+    fun pascalTriangleTest_5_minus() {
+        assertEquals(
+            "Wrong answer",
+            listOf(""),
+            agile.pascalTriangle(-5)
+        )
+    }
+
 }

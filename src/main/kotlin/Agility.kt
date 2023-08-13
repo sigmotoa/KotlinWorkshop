@@ -96,6 +96,7 @@ class Agility {
 
     }
 
+    //Print the pascal triangle
     fun pascalTriangle(numA: Int): List<Int?> {
         val pascalTriangle = listOf(null)
         return pascalTriangle

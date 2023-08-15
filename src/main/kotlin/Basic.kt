@@ -2,7 +2,7 @@ class Basic {
 
     //Make the sum of 2 numbers
     fun add_2_numbers(a: Int, b:Int): Int {
-        return 0
+        return a+b
     }
 
     //Make the sum of many numbers from a list of numbers

@@ -58,7 +58,7 @@ class BasicTest {
     fun add_many_numbers_Test_integer_negative_output() {
         assertEquals(
             "Error in your process",
-            -12,
+            -13,
             basic.add_many_numbers(listOf(7.0, 5.0, -24.5, -0.5))
         )
     }
@@ -67,7 +67,7 @@ class BasicTest {
     fun add_many_numbers_Test2_double_output() {
         assertEquals(
             "Error in your process",
-            14.3,
+            21.7,
             basic.add_many_numbers(listOf(3.5, 6.3, 9.2, 3.7, -1))
         )
     }

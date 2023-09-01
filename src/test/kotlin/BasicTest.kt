@@ -131,7 +131,7 @@ class BasicTest {
 
     @Test
     fun multiply_2_numbers_goodoutput() {
-        assertNotEquals(
+        assertEquals(
             "Error in output",
             3.63,
             basic.multiply_2_numbers(1.1, 3.3)
